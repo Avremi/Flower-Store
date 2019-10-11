@@ -1,0 +1,143 @@
+{
+    "branches" :[
+        {
+            "id":"1",
+            "location":"Jerusalem, Yaffo 60",
+            "active":"true",
+            "note":""
+        },
+        {
+            "id":"2",
+            "location":"Tel Aviv, Linkolen 13",
+            "active":"true",
+            "note":""
+        }
+    ],
+    "users":[
+        {
+            "credential":{
+                "username":"Avremi",
+                "password":"1234"
+            },
+            "firstName":"Avraham",
+            "lastName":"Cheshin",
+            "userType":"Admin",
+            "active":"true"
+        },
+        {
+            "credential":{
+                "username":"moshe",
+                "password":"1234"
+            },
+            "firstName":"Moshe",
+            "lastName":"Choen",
+            "userType":"worker",
+            "active":"true"
+        },
+        {
+            "credential":{
+                "username":"elchay",
+                "password":"1234"
+            },
+            "firstName":"Elchay",
+            "lastName":"Shoval",
+            "userType":"admin"
+            
+        },
+        {
+            "credential":{
+                "username":"esti",
+                "password":"1234"
+            },
+            "firstName":"Esti",
+            "lastName":"",
+            "userType":"worker",
+            "branchName" :"1"
+        },
+        {
+            "credential":{
+                "username":"shevi",
+                "password":"1234"
+            },
+            "firstName":"Shevi",
+            "lastName":"",
+            "userType":"worker",
+            "branchName" :"2"
+        },
+        {
+            "credential":{
+                "username":"m",
+                "password":"1234"
+            },
+            "firstName":"Moshe",
+            "lastName":"",
+            "userType":"client"
+        },
+        {
+            "credential":{
+                "username":"c",
+                "password":"1234"
+            },
+            "firstName":"Chaya",
+            "lastName":"Cheshin",
+            "userType":"client"
+        }
+    ],
+    "flowers":[
+        {
+            "name":"vered",
+            "color":"",
+            "image":"images/flowersImages/flower1.jpg",
+            "price":"10 $"
+        },
+        {
+            "name":"calanit",
+            "color":"",
+            "image":"images/flowersImages/flower2.jpg",
+            "price":"20 $"
+        },
+        {
+            "name":" super calanit",
+            "color":"",
+            "image":"images/flowersImages/flower3.jpg",
+            "price":"50 $"
+        },
+        {
+            "name":"Sachlab",
+            "color":"",
+            "image":"images/flowersImages/flower4.jpg",
+            "price":"15 $"
+        },
+        {
+            "name":"Yasmin",
+            "color":"",
+            "image":"images/flowersImages/flower5.jpg",
+            "price":"12.5 $"
+        },
+        {
+            "name":"ShoShana",
+            "color":"",
+            "image":"images/flowersImages/flower6.jpg",
+            "price":"13 $"
+        },
+        {
+            "name":"",
+            "color":"",
+            "image":"images/flowersImages/flower1.jpg",
+            "price":"7 $"
+        },
+        {
+            "name":"",
+            "color":"",
+            "image":"images/flowersImages/flower2.jpg",
+            "price":"5 $"
+        },
+        {
+            "name":"",
+            "color":"",
+            "image":"images/flowersImages/flower3.jpg",
+            "price":"18.5 $"
+        }
+    ]
+    
+}

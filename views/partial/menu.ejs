@@ -1,0 +1,117 @@
+<ul class="navbar-nav mr-auto" style="overFlow:hidden" style="height:auto">
+    <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+    </li>
+
+    <% if(userType != "anonymous"){ %>
+
+    <li class="nav-item">
+        <a class="nav-link" onclick="getGridFlowers()">Flowers</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" onclick="getUserGrid()">Users</a>
+        <!-- I have to add special add option for admon and employer -->
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" onclick="getBranchGrid()">Branches</a>
+    </li>
+    <% } %>
+
+    <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+    </li>
+
+</ul>
+<ul class="navbar-nav ml-auto nav-flex-icons">
+    <li class="nav-item">
+
+        <% if(userType == "anonymous"){ %>
+        <a class="nav-link waves-effect waves-light" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+            Login
+        </a>
+        <% } else{ %>
+        
+        <a href="/" class="nav-link waves-effect waves-light" class="btn btn-info btn-lg">
+
+            logout
+
+            <%=username %>
+        </a>
+        <% } %>
+
+
+    </li>
+    <!-- add js condition for the next element -->
+    <li>
+        <a href="#">
+            <span class="glyphicon glyphicon-user"></span>
+        </a>
+    </li>
+
+
+</ul>
+</div>
+
+<% if(userType == "anonymous"){ %>
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+
+            <div class="card">
+                <article class="card-body">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    <h4 class="card-title text-center mb-4 mt-1">Sign in</h4>
+
+                    <hr>
+
+                    <form id="loginForm" method="POST" action="/lo">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                </div>
+                                <input type="text" id="username" name="username" class="form-control" placeholder="Username"
+                                    required>
+                            </div> <!-- input-group.// -->
+                        </div> <!-- form-group// -->
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                                </div>
+                                <input name="password" class="form-control" placeholder="Password" type="password"
+                                    required>
+                            </div> <!-- input-group.// -->
+                        </div> <!-- form-group// -->
+
+                        <div class="form-group">
+                            <button id="login" type="submit" class="btn btn-primary btn-block"> Login </button>
+                            <script>
+                                $('#loginForm').submit(function () {
+
+                                    fetch('/login')
+                                        .then(response => response.ok)
+                                        .then(ok => resultAction(ok));
+
+                                    return false;
+                                });
+                            </script>
+                        </div> <!-- form-group// -->
+
+                        <p class="text-center"><a href="#" class="btn">Forgot Your Password?</a></p>
+                    </form>
+                </article>
+            </div> <!-- card.// -->
+
+        </div>
+
+    </div>
+    <% } %>
+
+    

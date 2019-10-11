@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+  
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.img-container {
+  float: left;
+  width: 100%;
+  display: block;
+  
+ 
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+  
+}
+</style>
+</head>
+<body>
+  <header>
+    <% include partial/myHeader %>
+
+  </header>
+
+<h1 style="color:darkkhaki; font-size:50px; text-align: center"> Hi there !!!  </h1>  
+<h1 style="color:darkkhaki; font-size:40px; text-align: center"> We are two computer science students in the last year and are building our first site. <br>If we had a lot of flower shops, we probably weren't students.
+    <br>So give a smile, we fool you!!!  (;  </h1>  
+
+
+
+<div class="clearfix">
+  <div class="img-container">
+  <img src="images/flowersImages/about.jpg"  style="width: 100%;">
+  </div>
+  
+  
+</div>
+
+<footer id="footer" style="position: fixed;bottom: 0;width: 100%;">
+    <% include partial/footer %>
+  </footer>
+</body>
+</html>
